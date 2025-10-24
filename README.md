@@ -13,10 +13,6 @@ This plugin highlights ToDo and and summarizes them in a list view.
 
 ## Manually installing the plugin
 
-There are two common ways to install the plugin manually:
-
-Option A — Install from source (development)
-
 1. Clone this repository into your vault's plugin folder `<VaultFolder>/.obsidian/plugins/`:
 
 ```bash
