@@ -17,10 +17,10 @@ There are two common ways to install the plugin manually:
 
 Option A — Install from source (development)
 
-1. Clone this repository into your vault's plugin folder:
+1. Clone this repository into your vault's plugin folder `<VaultFolder>/.obsidian/plugins/`:
 
 ```bash
-git clone <repo-url> "<VaultFolder>/.obsidian/plugins/todo-plugin"
+git clone <repo-url>
 ```
 
 2. Change into the plugin folder, install dependencies, and build:
@@ -28,25 +28,13 @@ git clone <repo-url> "<VaultFolder>/.obsidian/plugins/todo-plugin"
 ```bash
 cd "<VaultFolder>/.obsidian/plugins/todo-plugin"
 npm install
-npm run build   # or `npm run dev` for watch-mode during development
+npm run dev
 ```
 
-3. Open Obsidian → Settings → Community plugins and enable "ToDo Plugin". If the plugin does not appear, restart Obsidian.
-
-Option B — Install from prebuilt files (quick install)
-
-1. Copy the release files into a plugin folder in your vault (create the folder if needed):
-
-```bash
-mkdir -p "<VaultFolder>/.obsidian/plugins/todo-plugin"
-cp main.js manifest.json styles.css "<VaultFolder>/.obsidian/plugins/todo-plugin/"
-```
-
-2. Open Obsidian → Settings → Community plugins and enable "ToDo Plugin".
+3. Open Obsidian → Settings → Community plugins and enable "ToDo Plugin". If the plugin does not appear or it is not possible to enable it, restart Obsidian.
 
 Notes
 
--   Do not copy `node_modules` into your vault. Only the built `main.js`, `manifest.json`, and optional `styles.css` should be placed in the plugin folder for manual installs.
 -   Replace `<repo-url>` and `<VaultFolder>` with your repository URL and vault path.
 
 ## Usage
