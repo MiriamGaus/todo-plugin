@@ -6,3 +6,144 @@ available in the app when your plugin is enabled.
 If your plugin does not need CSS, delete this file.
 
 */
+
+/* Additional styling for todo boxes */
+.cm-todo {
+	transition: all 0.2s ease-in-out;
+}
+
+/* Todo List View Styling */
+.todo-file-section {
+	margin-bottom: 15px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	padding: 10px;
+}
+
+.todo-file-header {
+	margin: 0 0 8px 0;
+	color: var(--text-accent);
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: 600;
+}
+
+.todo-file-header:hover {
+	text-decoration: underline;
+}
+
+.todo-heading {
+	margin: 0;
+	font-size: 1.05em;
+	flex: 1 1 auto;
+	min-width: 0;
+}
+.todo-list {
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+.todo-item {
+	padding: 6px 8px;
+	margin: 2px 0;
+	background: var(--background-secondary);
+	border-radius: 4px;
+	cursor: pointer;
+	border-left: 3px solid var(--text-accent);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.todo-item:hover {
+	background: var(--background-modifier-hover);
+}
+
+.todo-context {
+	flex: 1;
+	font-family: var(--font-monospace);
+	font-size: 0.9em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.todo-line-info {
+	color: var(--text-muted);
+	font-size: 0.8em;
+	margin-left: 8px;
+}
+
+.todo-empty-state {
+	color: var(--text-muted);
+	font-style: italic;
+	text-align: center;
+	padding: 20px;
+}
+
+.todo-refresh-btn {
+	width: 100%;
+	padding: 8px;
+	margin-top: 15px;
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 500;
+}
+
+.todo-refresh-btn:hover {
+	background: var(--interactive-accent-hover);
+}
+
+/* Header row: place heading and compact refresh icon on one line */
+.todo-header-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+
+/* Compact icon for the refresh button when in header */
+.todo-header-row .todo-refresh-btn {
+	width: 36px;
+	height: 36px;
+	padding: 0;
+	margin: 0;
+	border-radius: 6px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.1em;
+	background: transparent;
+	color: var(--text-normal);
+	/* Match other section outlines */
+	border: 1px solid var(--background-modifier-border);
+	transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.todo-header-row .todo-refresh-btn:hover {
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	border-color: var(--interactive-accent);
+}
+
+/* Disabled settings styling */
+.todo-setting-disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.todo-setting-disabled .setting-item-name,
+.todo-setting-disabled .setting-item-description {
+	color: var(--text-muted) !important;
+}
+
+.todo-setting-disabled .color-picker-button,
+.todo-setting-disabled .clickable-icon {
+	opacity: 0.3;
+	cursor: not-allowed !important;
+}
